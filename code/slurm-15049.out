@@ -1,0 +1,13 @@
+Wed Sep 23 18:47:10 +03 2020
+train_debug.py:140: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  df_positives_after_covid['counts'] = df_positives_after_covid.groupby(concept_id_name)[concept_id_name].transform('count')
+train_debug.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  df_positives_after_covid.sort_values('counts', inplace=True, ascending=False)
+slurmstepd: *** JOB 15049 ON draco CANCELLED AT 2020-09-24T19:00:25 ***

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+version_number=$1
+docker_dir="../../ehr-dream-challenges/examples/covid19-question-1/"
+
+cp train_${version_number}.py ${docker_dir}src/train.py
+cp infer_${version_number}.py ${docker_dir}src/infer.py
+
+#cp train_weka_fs.sh ${docker_dir}train.sh
+#cp model_training.py ${docker_dir}src/
+

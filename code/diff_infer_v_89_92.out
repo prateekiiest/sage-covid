@@ -1,0 +1,136 @@
+18,35c18,35
+< measurement_concept_ids_filename = "../../data/measurement_concept_ids.list"
+< condition_concept_ids_filename = "../../data/condition_concept_ids.list"
+< observation_concept_ids_filename = "../../data/observation_concept_ids.list"
+< device_exposure_concept_ids_filename = "../../data/device_exposure_concept_ids.list"
+< drug_exposure_concept_ids_filename = "../../data/drug_exposure_concept_ids.list"
+< procedure_concept_ids_filename = "../../data/procedure_concept_ids.list"
+< visit_concept_ids_filename = "../../data/visit_concept_ids.list"
+< best_n_features_selected_measurement_filename = "../../model/best_n_features_selected_measurement"
+< best_n_features_selected_measurement_2_filename = "../../../model/best_n_features_selected_measurement_2"
+< best_n_features_selected_condition_filename = "../../model/best_n_features_selected_condition"
+< best_n_features_selected_observation_filename = "../../model/best_n_features_selected_observation"
+< best_n_features_selected_device_exposure_filename = "../../model/best_n_features_selected_device_exposure"
+< best_n_features_selected_drug_exposure_filename = "../../model/best_n_features_selected_drug_exposure"
+< best_n_features_selected_procedure_filename = "../../model/best_n_features_selected_procedure"
+< best_n_features_selected_visit_filename = "../../model/best_n_features_selected_visit"
+< one_hot_encoder_filename = "../../model/one_hot_encoder"
+< label_encoder_filename = "../../model/label_encoder"
+< normalizer_filename = "../../model/normalizer"
+---
+> measurement_concept_ids_filename = "/model/measurement_concept_ids.list"
+> condition_concept_ids_filename = "/model/condition_concept_ids.list"
+> observation_concept_ids_filename = "/model/observation_concept_ids.list"
+> device_exposure_concept_ids_filename = "/model/device_exposure_concept_ids.list"
+> drug_exposure_concept_ids_filename = "/model/drug_exposure_concept_ids.list"
+> procedure_concept_ids_filename = "/model/procedure_concept_ids.list"
+> visit_concept_ids_filename = "/model/visit_concept_ids.list"
+> best_n_features_selected_measurement_filename = "/model/best_n_features_selected_measurement"
+> best_n_features_selected_measurement_2_filename = "/model/best_n_features_selected_measurement_2"
+> best_n_features_selected_condition_filename = "/model/best_n_features_selected_condition"
+> best_n_features_selected_observation_filename = "/model/best_n_features_selected_observation"
+> best_n_features_selected_device_exposure_filename = "/model/best_n_features_selected_device_exposure"
+> best_n_features_selected_drug_exposure_filename = "/model/best_n_features_selected_drug_exposure"
+> best_n_features_selected_procedure_filename = "/model/best_n_features_selected_procedure"
+> best_n_features_selected_visit_filename = "/model/best_n_features_selected_visit"
+> one_hot_encoder_filename = "/model/one_hot_encoder"
+> label_encoder_filename = "/model/label_encoder"
+> normalizer_filename = "/model/normalizer"
+40,41c40,41
+< #measurement = pd.read_csv('../../ehr-dream-challenges/examples/covid19-question-1/synthetic_data/evaluation/measurement.csv',usecols = ['measurement_concept_id','value_as_number','person_id', 'measurement_date', 'measurement_time', 'value_as_concept_id'])
+< measurement = pd.read_csv('../../ehr-dream-challenges/examples/covid19-question-1/synthetic_data/evaluation/measurement.csv',usecols = ['measurement_concept_id','value_as_number','person_id', 'measurement_date', 'measurement_time'])
+---
+> #measurement = pd.read_csv('/data/measurement.csv',usecols = ['measurement_concept_id','value_as_number','person_id', 'measurement_date', 'measurement_time', 'value_as_concept_id'])
+> measurement = pd.read_csv('/data/measurement.csv',usecols = ['measurement_concept_id','value_as_number','person_id', 'measurement_date', 'measurement_time'])
+56c56
+< condition = pd.read_csv("../../ehr-dream-challenges/examples/covid19-question-1/synthetic_data/evaluation/condition_occurrence.csv",usecols = ['condition_concept_id','person_id', 'condition_start_date', 'condition_end_date'])
+---
+> condition = pd.read_csv("/data/condition_occurrence.csv",usecols = ['condition_concept_id','person_id', 'condition_start_date', 'condition_end_date'])
+67c67
+< observation = pd.read_csv("../../ehr-dream-challenges/examples/covid19-question-1/synthetic_data/evaluation/observation.csv",usecols = ['observation_concept_id','person_id', 'observation_date'])
+---
+> observation = pd.read_csv("/data/observation.csv",usecols = ['observation_concept_id','person_id', 'observation_date'])
+76c76
+< device_exposure = pd.read_csv("../../ehr-dream-challenges/examples/covid19-question-1/synthetic_data/evaluation/device_exposure.csv",usecols = ['device_concept_id','person_id', 'device_exposure_start_date', 'device_exposure_end_date'])
+---
+> device_exposure = pd.read_csv("/data/device_exposure.csv",usecols = ['device_concept_id','person_id', 'device_exposure_start_date', 'device_exposure_end_date'])
+87c87
+< drug_exposure = pd.read_csv('../../ehr-dream-challenges/examples/covid19-question-1/synthetic_data/evaluation/drug_exposure.csv',usecols = ['drug_concept_id', 'person_id', 'drug_exposure_start_date', 'drug_exposure_end_date'])
+---
+> drug_exposure = pd.read_csv('/data/drug_exposure.csv',usecols = ['drug_concept_id', 'person_id', 'drug_exposure_start_date', 'drug_exposure_end_date'])
+99c99
+< procedure = pd.read_csv('../../ehr-dream-challenges/examples/covid19-question-1/synthetic_data/evaluation/procedure_occurrence.csv',usecols = ['procedure_concept_id', 'person_id', 'procedure_date'])
+---
+> procedure = pd.read_csv('/data/procedure_occurrence.csv',usecols = ['procedure_concept_id', 'person_id', 'procedure_date'])
+110c110
+< visit = pd.read_csv('../../ehr-dream-challenges/examples/covid19-question-1/synthetic_data/evaluation/visit_occurrence.csv',usecols = ['visit_concept_id', 'person_id', 'visit_start_date', 'visit_end_date'])
+---
+> visit = pd.read_csv('/data/visit_occurrence.csv',usecols = ['visit_concept_id', 'person_id', 'visit_start_date', 'visit_end_date'])
+141c141
+< person = pd.read_csv('../../ehr-dream-challenges/examples/covid19-question-1/synthetic_data/evaluation/person.csv')
+---
+> person = pd.read_csv('/data/person.csv')
+165c165
+< #X_ave = np.zeros((len(person_index), n_measurement_types))
+---
+> X_ave = np.zeros((len(person_index), n_measurement_types))
+217c217
+<         if (i == '3003694'): #blood group and Rh group 
+---
+>         if (i == '3003694'): #blood group and Rh group
+228c228
+<                         #X_ave[index_p][index_f] = X_min[index_p][index_f]
+---
+>                         X_ave[index_p][index_f] = X_min[index_p][index_f]
+237,238c237,238
+<         #subm_after_covid_ave = subm_after_covid.groupby('person_id')['value_as_number'].mean()
+<         
+---
+>         subm_after_covid_ave = subm_after_covid.groupby('person_id')['value_as_number'].mean()
+> 
+241c241
+<         #subm_before_covid_ave = subm_before_covid.groupby('person_id')['value_as_number'].mean()
+---
+>         subm_before_covid_ave = subm_before_covid.groupby('person_id')['value_as_number'].mean()
+249c249
+<                 #X_ave[index_p][index_f] = subm_after_covid_ave[person_id]
+---
+>                 X_ave[index_p][index_f] = subm_after_covid_ave[person_id]
+256c256
+<         
+---
+> 
+261c261
+<                 #X_ave[index_p][index_f] = subm_before_covid_ave[person_id]
+---
+>                 X_ave[index_p][index_f] = subm_before_covid_ave[person_id]
+269c269
+<         #X_ave[:, index_f] = le.transform(X_ave[:, index_f])
+---
+>         X_ave[:, index_f] = le.transform(X_ave[:, index_f])
+282c282
+<         
+---
+> 
+408c408
+< #X_ave_selected = X_ave[:, 0:best_n_features_selected_measurement]
+---
+> X_ave_selected = X_ave[:, 0:best_n_features_selected_measurement]
+411c411
+< #X_measurement_selected = np.concatenate((X_measurement_selected, X_ave_selected), axis=1)
+---
+> X_measurement_selected = np.concatenate((X_measurement_selected, X_ave_selected), axis=1)
+429c429
+< selectorfile = '../../model/feature_selector_stage_2.sav'
+---
+> selectorfile = '/model/feature_selector_stage_2.sav'
+443c443
+< clf =  load('../../model/baseline.joblib')
+---
+> clf =  load('/model/baseline.joblib')
+448c448
+< output_prob.to_csv('../../output/predictions.csv', index = False)
+---
+> output_prob.to_csv('/output/predictions.csv', index = False)
+450d449
+< 

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+data_dir="../data/xmlmesh/"
+xml_filename="${data_dir}pa2020.xml"
+csv_filename="${data_dir}pa2020.csv"
+
+python convert_xml_to_data_frame_csv.py $xml_filename $csv_filename
+

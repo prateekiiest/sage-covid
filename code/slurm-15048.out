@@ -1,0 +1,6 @@
+Wed Sep 23 18:45:59 +03 2020
+Traceback (most recent call last):
+  File "train_debug.py", line 21, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+Wed Sep 23 18:46:07 +03 2020

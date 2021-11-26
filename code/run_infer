@@ -1,0 +1,7 @@
+#!/bin/bash
+
+source /vol1/capps/python/python383.sh
+
+python infer_54.py
+
+

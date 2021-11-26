@@ -1,0 +1,6 @@
+#!/bin/bash
+
+source /vol1/capps/python/python383.sh
+
+python train_15.py
+

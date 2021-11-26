@@ -1,0 +1,22 @@
+#!/bin/bash
+
+data_dir="../data/release_07-06-2020/training/"
+positives_list_filename="${data_dir}positives.list"
+positives_person_ids_list_filename="${data_dir}positives_person_ids.list"
+condition_occurrence_filename="${data_dir}visit_occurrence.csv"
+condition_concept_ids_filename="${data_dir}visit_occurrence_concept_ids_unsorted.dat"
+condition_concept_ids_filename_2="${data_dir}visit_occurrence_concept_ids_sorted.dat"
+
+#cut -f 1 -d ',' $positives_list_filename > $positives_person_ids_list_filename
+
+> $condition_concept_ids_filename
+
+while read person_id
+do
+	echo $person_id
+	grep ",${person_id}," $condition_occurrence_filename | grep "2020-" | cut -f 3 -d ',' | sort -n | uniq  >> $condition_concept_ids_filename
+
+done < $positives_person_ids_list_filename
+
+sort -n $condition_concept_ids_filename | uniq -c | sort -nr -k 1 > $condition_concept_ids_filename_2
+

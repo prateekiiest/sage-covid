@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#source /vol1/capps/python/python383.sh
+
+date
+python train_89.py
+date

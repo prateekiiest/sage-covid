@@ -1,0 +1,46 @@
+Thu Sep 24 19:02:43 +03 2020
+train_debug.py:140: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  df_positives_after_covid['counts'] = df_positives_after_covid.groupby(concept_id_name)[concept_id_name].transform('count')
+train_debug.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  df_positives_after_covid.sort_values('counts', inplace=True, ascending=False)
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/sag.py:334: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  "the coef_ did not converge", ConvergenceWarning)
+Load person.csv
+2020-09-24 19:02:44.479549
+true labels
+2020-09-24 19:02:44.496226
+Load measurement.csv
+(28347125, 4)
+2020-09-24 19:03:42.489470
+Sort measurement concept ids
+2020-09-24 19:03:53.771268
+Load person.csv
+2020-09-24 19:03:53.845030
+Define feature arrays
+2020-09-24 19:03:53.863692
+measurements
+2020-09-24 19:13:28.091039
+(49891, 1470)
+true labels
+Y.shape
+(49891,)
+2020-09-24 19:13:28.814644
+2020-09-24 19:13:28.820386
+feature selection
+n features total: 490
+concatenation of feature matrices
+X_selected.shape
+(49891, 127)
+2020-09-24 19:32:04.368953
+model training
+2020-09-24 19:32:05.885918
+model training done
+Training stage finished
+Thu Sep 24 19:32:07 +03 2020

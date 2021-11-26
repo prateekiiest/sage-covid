@@ -1,0 +1,20 @@
+#!/bin/bash
+
+data_dir="../data/release_07-06-2020/training/"
+data_dir_2="../data/"
+condition_concept_ids_filename="${data_dir}drug_exposure_concept_ids_sorted.dat"
+data_dictionary_filename="${data_dir_2}data_dictionary.csv"
+drug_names_filename="${data_dir}drug_exposure_names.dat"
+
+> $drug_names_filename
+
+while read line
+do
+	drug_concept_id=$(echo $line | cut -f 2 -d ' ')
+	
+	grep "${drug_concept_id}," $data_dictionary_filename >> $drug_names_filename
+
+done < $condition_concept_ids_filename
+
+echo $drug_names_filename
+

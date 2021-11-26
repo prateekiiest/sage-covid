@@ -1,0 +1,116 @@
+Wed Sep 23 23:04:16 +03 2020
+train_89.py:164: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  measurement_positives_after_covid['counts'] = measurement_positives_after_covid.groupby('measurement_concept_id')['measurement_concept_id'].transform('count')
+train_89.py:165: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  measurement_positives_after_covid.sort_values('counts', inplace=True, ascending=False)
+train_89.py:191: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  condition_positives_after_covid['counts'] = condition_positives_after_covid.groupby('condition_concept_id')['condition_concept_id'].transform('count')
+train_89.py:193: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  condition_positives_after_covid.sort_values('counts', inplace=True, ascending=False)
+train_89.py:212: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  observation_positives_after_covid['counts'] = observation_positives_after_covid.groupby('observation_concept_id')['observation_concept_id'].transform('count')
+train_89.py:214: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  observation_positives_after_covid.sort_values('counts', inplace=True, ascending=False)
+train_89.py:238: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  device_exposure_positives_after_covid['counts'] = device_exposure_positives_after_covid.groupby('device_concept_id')['device_concept_id'].transform('count')
+train_89.py:240: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  device_exposure_positives_after_covid.sort_values('counts', inplace=True, ascending=False)
+Load person.csv
+2020-09-23 23:04:17.244297
+true labels
+2020-09-23 23:04:17.257168
+Load measurement.csv
+(28347125, 5)
+2020-09-23 23:05:23.586841
+Sort measurement concept ids
+2020-09-23 23:05:34.634959
+Load condition.csv
+2020-09-23 23:06:02.196524
+Sort condition concept ids
+2020-09-23 23:06:06.714539
+Load observation.csv
+2020-09-23 23:06:18.211978
+Sort observation concept ids
+2020-09-23 23:06:20.302137
+Load device_exposure.csv
+2020-09-23 23:06:20.319381
+Sort device_exposure concept ids
+2020-09-23 23:06:20.368train_89.py:264: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  drug_exposure_positives_after_covid['counts'] = drug_exposure_positives_after_covid.groupby('drug_concept_id')['drug_concept_id'].transform('count')
+train_89.py:266: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  drug_exposure_positives_after_covid.sort_values('counts', inplace=True, ascending=False)
+train_89.py:288: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  procedure_positives_after_covid['counts'] = procedure_positives_after_covid.groupby('procedure_concept_id')['procedure_concept_id'].transform('count')
+train_89.py:290: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  procedure_positives_after_covid.sort_values('counts', inplace=True, ascending=False)
+train_89.py:311: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  visit_positives_after_covid['counts'] = visit_positives_after_covid.groupby('visit_concept_id')['visit_concept_id'].transform('count')
+train_89.py:313: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  visit_positives_after_covid.sort_values('counts', inplace=True, ascending=False)
+537
+Load drug_exposure.csv
+2020-09-23 23:07:08.293835
+Sort drug_exposure concept ids
+2020-09-23 23:07:16.800135
+Load procedure_occurrence.csv
+Sort procedure concept ids
+Load visit_occurrence.csv
+Sort visit concept ids
+Load person.csv
+2020-09-23 23:07:25.051191
+Define feature arrays
+2020-09-23 23:07:25.123155
+measurement counts
+measurements
+2020-09-23 23:29:51.548468
+2020-09-23 23:38:08.716873
+Wed Sep 23 23:38:12 +03 2020

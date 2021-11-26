@@ -1,0 +1,22 @@
+#!/bin/bash
+
+java_dir="/usr/bin/"
+weka_dir="/vol1/software/weka/3.8.4/"
+data_dir="../data/"
+results_dir="../output/"
+models_dir="../model/"
+
+dataset_filename="${data_dir}musk1_mi.arff"
+model_filename="${models_dir}weka_tlc.model"
+
+weka_output_filename="${results_dir}weka_tlc_musk1.out"
+n_cv_folds=10
+
+#${java_dir}java -classpath ${weka_dir}weka.jar:${weka_dir}multiInstanceFilters.jar:${weka_dir}multiInstanceLearning.jar weka.classifiers.mi.TLC -x $n_cv_folds -t $dataset_filename -P "weka.classifiers.trees.J48 -C 0.25 -M 2" -W weka.classifiers.meta.LogitBoost -- -P 100 -L -1.7976931348623157E308 -H 1.0 -Z 3.0 -O 1 -E 1 -S 1 -I 10 -W weka.classifiers.trees.DecisionStump > $weka_output_filename
+
+${java_dir}java -classpath ${weka_dir}weka.jar:${weka_dir}multiInstanceFilters.jar:${weka_dir}multiInstanceLearning.jar weka.classifiers.mi.TLC -x $n_cv_folds -t $dataset_filename -p 0 -distribution -d $model_filename -P "weka.classifiers.trees.J48 -C 0.25 -M 2" -W weka.classifiers.meta.LogitBoost -- -P 100 -L -1.7976931348623157E308 -H 1.0 -Z 3.0 -O 1 -E 1 -S 1 -I 10 -W weka.classifiers.trees.DecisionStump > $weka_output_filename
+
+${java_dir}java -classpath ${weka_dir}weka.jar:${weka_dir}multiInstanceFilters.jar:${weka_dir}multiInstanceLearning.jar weka.classifiers.mi.TLC -T $dataset_filename -p 0 -distribution -l $model_filename > $weka_output_filename
+
+#-p 0 -distribution -t $dataset_filename > $weka_output_filename
+
